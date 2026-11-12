@@ -1,0 +1,223 @@
+{
+  "feature_cols": [
+    "temperature",
+    "humidity",
+    "co2",
+    "pm25",
+    "pm10",
+    "tvoc",
+    "co",
+    "light_intensity",
+    "motion_detected",
+    "occupancy_count",
+    "ventilation_encoded"
+  ],
+  "defaults": {
+    "temperature": 23.0,
+    "humidity": 50.0,
+    "co2": 701.17,
+    "pm25": 39.91,
+    "pm10": 55.31,
+    "tvoc": 273.78,
+    "co": 2.55,
+    "light_intensity": 549.56,
+    "motion_detected": 0.0,
+    "occupancy_count": 24.0,
+    "ventilation_encoded": 0.0
+  },
+  "min": {
+    "temperature": 18.0,
+    "humidity": 30.0,
+    "co2": 400.0,
+    "pm25": 5.0,
+    "pm10": 10.0,
+    "tvoc": 50.0,
+    "co": 0.1,
+    "light_intensity": 100.04,
+    "motion_detected": 0.0,
+    "occupancy_count": 0.0,
+    "ventilation_encoded": 0.0
+  },
+  "max": {
+    "temperature": 28.0,
+    "humidity": 70.0,
+    "co2": 999.99,
+    "pm25": 75.0,
+    "pm10": 100.0,
+    "tvoc": 499.99,
+    "co": 5.0,
+    "light_intensity": 999.99,
+    "motion_detected": 1.0,
+    "occupancy_count": 49.0,
+    "ventilation_encoded": 1.0
+  },
+  "sklearn": {
+    "labels": [
+      "Good",
+      "Moderate",
+      "Polluted"
+    ],
+    "confusion_matrix": [
+      [
+        95,
+        2,
+        0
+      ],
+      [
+        0,
+        7429,
+        0
+      ],
+      [
+        0,
+        0,
+        8074
+      ]
+    ],
+    "per_class": [
+      {
+        "Class": "Good",
+        "Precision": 1.0,
+        "Recall": 0.979381443298969,
+        "F1-Score": 0.9895833333333334,
+        "Support": 97
+      },
+      {
+        "Class": "Moderate",
+        "Precision": 0.9997308572197551,
+        "Recall": 1.0,
+        "F1-Score": 0.9998654104979812,
+        "Support": 7429
+      },
+      {
+        "Class": "Polluted",
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1-Score": 1.0,
+        "Support": 8074
+      }
+    ],
+    "feature_importance": {
+      "temperature": 0.0015126745690821654,
+      "humidity": 0.0015684378089539167,
+      "co2": 0.005057251456663333,
+      "pm25": 0.54902096816527,
+      "pm10": 0.4328828075028701,
+      "tvoc": 0.001683391488491486,
+      "co": 0.005100863496257634,
+      "light_intensity": 0.0017309473692571067,
+      "motion_detected": 0.00018120608346902856,
+      "occupancy_count": 0.0010805679557286062,
+      "ventilation_encoded": 0.0001808841039563549
+    }
+  },
+  "spark": {
+    "labels": [
+      "Polluted",
+      "Moderate",
+      "Good"
+    ],
+    "confusion_matrix": [
+      [
+        8162,
+        111,
+        0
+      ],
+      [
+        32,
+        7418,
+        0
+      ],
+      [
+        0,
+        72,
+        0
+      ]
+    ],
+    "per_class": [
+      {
+        "Class": "Polluted",
+        "Precision": 0.9960947034415426,
+        "Recall": 0.9865828599057174,
+        "F1-Score": 0.991315965263861
+      },
+      {
+        "Class": "Moderate",
+        "Precision": 0.975924220497303,
+        "Recall": 0.9957046979865772,
+        "F1-Score": 0.9857152348681152
+      },
+      {
+        "Class": "Good",
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1-Score": 0.0
+      }
+    ],
+    "feature_importance": {
+      "pm25": 0.6013803916724711,
+      "pm10": 0.3973806461856703,
+      "co": 0.00041385640357083966,
+      "co2": 0.0003796140234565928,
+      "light_intensity": 0.00010762502445593782,
+      "occupancy_count": 9.842454193388033e-05,
+      "temperature": 8.639396851765536e-05,
+      "humidity": 7.734731975759274e-05,
+      "tvoc": 6.431276572274616e-05,
+      "motion_detected": 6.714198909040025e-06,
+      "ventilation_encoded": 4.673895534354135e-06
+    }
+  },
+  "compare": [
+    {
+      "Metrik": "Data latih",
+      "PySpark": "62.202",
+      "Scikit-Learn": "62.397"
+    },
+    {
+      "Metrik": "Data uji",
+      "PySpark": "15.795",
+      "Scikit-Learn": "15.600"
+    },
+    {
+      "Metrik": "Jumlah pohon",
+      "PySpark": "100",
+      "Scikit-Learn": "100"
+    },
+    {
+      "Metrik": "Training time",
+      "PySpark": "17,1199 detik",
+      "Scikit-Learn": "16,82 detik"
+    },
+    {
+      "Metrik": "Prediction time",
+      "PySpark": "0,7334 detik",
+      "Scikit-Learn": "0,1712 detik"
+    },
+    {
+      "Metrik": "Accuracy",
+      "PySpark": "98.64%",
+      "Scikit-Learn": "99.99%"
+    },
+    {
+      "Metrik": "Weighted Precision",
+      "PySpark": "98.20%",
+      "Scikit-Learn": "99.99%"
+    },
+    {
+      "Metrik": "Weighted Recall",
+      "PySpark": "98.64%",
+      "Scikit-Learn": "99.99%"
+    },
+    {
+      "Metrik": "Weighted F1-Score",
+      "PySpark": "98.42%",
+      "Scikit-Learn": "99.99%"
+    },
+    {
+      "Metrik": "Macro F1-Score",
+      "PySpark": "-",
+      "Scikit-Learn": "99.65%"
+    }
+  ]
+}
